@@ -1,4 +1,4 @@
-# AWS Security-as-Infrastructure Repository
+# Security-as-Infrastructure (SAI) AWS Terraform Patterns for Mature, Large Organizations
 
 ## Purpose
 Production-grade, **security-as-infrastructure** blueprint for a large enterprise on AWS. Implements AWS Organizations with **per-service delegated admins**, separates **evidentiary logging** and **operational detections**, and uses **Terraform** with strong isolation.
