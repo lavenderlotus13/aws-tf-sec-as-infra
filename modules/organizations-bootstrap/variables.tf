@@ -1,0 +1,1 @@
+# Define strict, small inputs here.

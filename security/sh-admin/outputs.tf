@@ -1,0 +1,1 @@
+output "securityhub_regions" { value = var.regions }

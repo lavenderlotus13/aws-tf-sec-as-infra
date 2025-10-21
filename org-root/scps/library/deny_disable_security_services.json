@@ -1,0 +1,15 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [{
+    "Sid": "DenyDisableCoreSecurityServices",
+    "Effect": "Deny",
+    "Action": [
+      "cloudtrail:DeleteTrail","cloudtrail:StopLogging",
+      "config:DeleteConfigurationRecorder","config:StopConfigurationRecorder",
+      "guardduty:DeleteDetector","guardduty:StopMonitoringMembers",
+      "securityhub:DisableSecurityHub","securityhub:DeleteActionTarget",
+      "organizations:DeregisterDelegatedAdministrator"
+    ],
+    "Resource": "*"
+  }]
+}

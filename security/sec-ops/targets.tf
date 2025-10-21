@@ -1,0 +1,1 @@
+# Add EventBridge targets (SQS/Kinesis/Lambda/SIEM) here.
