@@ -7,7 +7,7 @@ Production-grade, **security-as-infrastructure** blueprint for a large enterpris
 - Management account: organizations, OUs, curated SCPs, and **bootstrap** (trusted access + delegated admin designation).
 - Per-service delegated admin accounts: **org-wide enablement** and configuration for Security Hub, GuardDuty, Macie, Inspector, Detective, IAM Access Analyzer.
 - Sec-Ops account: EventBridge bus and targets for findings ingestion, correlation, and response.
-- Log Archive account: Org CloudTrail, Config aggregator, **S3 Object Lock (WORM)**.
+- Log Archive account: Org CloudTrail, Config aggregator, **S3 Object Lock (WORM)**, for legal purposes.
 - Workload accounts: application runtime; inherit guardrails; no org control-plane privileges.
 
 ## Repository Layout
@@ -41,7 +41,6 @@ Aligns with AWS delegated admin boundaries and Terraform composition guidance; r
 - Slightly more boilerplate; mitigated by templates and CI
 
 
-
 ## ADR: Separate Sec-Ops (SOC) and Log Archive (Audit) Accounts
 
 **Decision**  
@@ -57,7 +56,6 @@ Different access patterns/retention; separation protects evidentiary integrity a
 - Additional accounts; gains in safety and clarity justify it
 
 
-
 ## ADR: Terraform Roots per Account
 
 **Decision**  
@@ -71,7 +69,6 @@ Improves RBAC, auditability, rollbacks, and drift repair.
 
 **Consequences**  
 - More pipelines; manageable with templates
-
 
 ## Next Steps
 - Configure remote state buckets and DynamoDB locks.
